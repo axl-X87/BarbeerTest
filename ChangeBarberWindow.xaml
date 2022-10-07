@@ -1,0 +1,96 @@
+﻿<Window x:Class="Barbeer.ChangeBarberWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barbeer"
+        mc:Ignorable="d"
+        Title="ChangeBarberWindow" Height="300" Width="550" WindowStartupLocation="CenterScreen">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <!--#region Заполнение информации-->
+        <TextBlock Grid.Row="0"
+                   Text="Id"
+                   FontFamily="Lucida Console"
+                   FontSize="32"
+                   Foreground="white"
+                   TextAlignment="center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="1"
+                   Text="Имя"
+                   FontFamily="Lucida Console"
+                   FontSize="32"
+                   Foreground="white"
+                   TextAlignment="center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2"
+                   Text="Фото"
+                   FontFamily="Lucida Console"
+                   FontSize="32"
+                   Foreground="white"
+                   TextAlignment="center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3"
+                   Text="Статус работы"
+                   FontFamily="Lucida Console"
+                   FontSize="32"
+                   Foreground="white"
+                   TextAlignment="center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Style="{StaticResource Maintbx}"
+                 x:Name="IdTbx"
+                 Text="{Binding Id}"/>
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Style="{StaticResource Maintbx}"
+                 Text="{Binding Name}"
+                 Name="NameTbx"/>
+        <Button Grid.Row="2"
+                 Grid.Column="1"
+                 Style="{StaticResource ActionBtn}"
+                 Content="..."
+                FontSize="32"
+                Name="ChangePhotoBtn"
+                Click="ChangePhotoBtn_Click"/>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Style="{StaticResource Maintbx}"
+                 Text="{Binding Status}"/>
+        <!--#endregion-->
+        
+        <!--#region Кнопки навигации и сохранения -->
+        <Button Grid.Row="4"
+                Grid.Column="0"
+                Style="{StaticResource ActionBtn}"
+                Content="Назад"
+                FontSize="32"
+                Name="ReturnBtn"
+                Click="ReturnBtn_Click"/>
+        <Button Grid.Row="4"
+                Grid.Column="1"
+                Style="{StaticResource ActionBtn}"
+                Content="Сохранить"
+                FontSize="32"
+                Name="SaveCHangeBtn"
+                Click="SaveCHangeBtn_Click"/>
+        <!--#endregion-->
+
+    </Grid>
+</Window>

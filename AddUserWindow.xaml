@@ -1,0 +1,93 @@
+﻿<Window x:Class="Barbeer.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barbeer"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="280" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Логин"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="24"
+                               FontWeight="bold"/>
+            <TextBox Grid.Column="1"
+                             Height="50"
+                             Width="150"
+                             Style="{StaticResource Maintbx}"
+                             TextAlignment="Left"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             FontSize="36"
+                             FontFamily="LucidaCosole"
+                             FontWeight="Bold"
+                             Name="SaveUserTbx"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Пароль"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="24"
+                   FontWeight="bold"/>
+            <PasswordBox Grid.Column="1"
+                                 Height="50"
+                                 Width="150"
+                                 Style="{StaticResource Mainpbx}"
+                                 PasswordChar="."
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 FontSize="36"
+                                 FontFamily="LucidaCosole"
+                                 FontWeight="Bold"
+                                 Name="SaveUserPbx"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="50"
+                    Width="100"
+                    Content="Выйти"
+                    Style="{StaticResource ActionBtn}"
+                    Name="ToMWbtn"
+                    Click="ToMWbtn_Click"/>
+            
+            <Button Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="50"
+                    Width="100"
+                    Content="Сохранить"
+                    Style="{StaticResource ActionBtn}"
+                    Name="SaveUserBtn"
+                    Click="SaveUserBtn_Click"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,137 @@
+﻿<Window x:Class="Barbeer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barbeer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Система учета клиентов для барбершопа"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="34"
+                   FontWeight="bold"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Image Source="/Resources/Icons/free-icon-beard-4615587.png"/>
+            </Grid>
+            
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Введите данные"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="24"
+                           FontWeight="bold"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Логин"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="24"
+                               FontWeight="bold"/>
+                    <TextBox Grid.Column="1"
+                             Height="50"
+                             Width="250"
+                             Style="{StaticResource Maintbx}"
+                             TextAlignment="Left"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             FontSize="36"
+                             FontFamily="LucidaCosole"
+                             FontWeight="Bold"
+                             Name="EntryTbx"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Text="Пароль"
+                   Foreground="White"
+                   FontFamily="Lucida Console"
+                   FontSize="24"
+                   FontWeight="bold"/>
+                    <PasswordBox Grid.Column="1"
+                                 Height="50"
+                                 Width="250"
+                                 Style="{StaticResource Mainpbx}"
+                                 PasswordChar="."
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 FontSize="36"
+                                 FontFamily="LucidaCosole"
+                                 FontWeight="Bold"
+                                 Name="EntryPbx"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Name="ExitBtn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="50"
+                    Width="140"
+                    Content="Выход"
+                    Style="{StaticResource ActionBtn}"
+                    Click="ExitBtn_Click"/>
+
+            <Button Grid.Column="1"
+                    Name="AddNEbtn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="50"
+                    Width="140"
+                    Content="Добавить сотрудника"
+                    Style="{StaticResource ActionBtn}"
+                    Click="AddNEbtn_Click"/>
+            <Button Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="50"
+                    Width="140"
+                    Content="Вход"
+                    Style="{StaticResource ActionBtn}"
+                    Name="EntryBtn"
+                    Click="EntryBtn_Click"/>
+        </Grid>
+        
+    </Grid>
+</Window>

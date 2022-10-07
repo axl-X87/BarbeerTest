@@ -1,0 +1,86 @@
+﻿<Window x:Class="Barbeer.ViewEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barbeer"
+        mc:Ignorable="d"
+        Title="ViewEmployeeWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Grid Background="black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="10*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <!--#region Лист барберов -->
+        <Grid Grid.Column="1">
+            <ListView Background="black"
+                      Name="EmployeeLV"
+                      Foreground="White"
+                      FontFamily="Lucida Console">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="id" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Фото" DisplayMemberBinding="{Binding Photo}"/>
+                        <GridViewColumn Header="Статус работы" DisplayMemberBinding="{Binding BarberStatus}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <!--#endregion-->
+        <!--#region вспомогательный грид -->
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                        Style="{StaticResource ActionBtn}"
+                        Content="В меню"
+                        Width="100"
+                        HorizontalAlignment="Left"
+                        Name="BTMMbtn"
+                        Click="BTMMbtn_Click"/>
+                <Button Grid.Column="1"
+                        Style="{StaticResource ActionBtn}"
+                        Content="Добавить барбера"
+                        FontSize="10"
+                        Name="AddBarberBtn"
+                        Click="AddBarberBtn_Click"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                        Style="{StaticResource ActionBtn}"
+                        Content="Редактировать"
+                        Width="100"
+                        HorizontalAlignment="Left"
+                        Name="ChangeUser"
+                        Click="ChangeUser_Click"/>
+                <Button Grid.Column="1"
+                        Style="{StaticResource ActionBtn}"
+                        Content="Удалить барбера"
+                        FontSize="10"
+                        Name="DeleteUser"
+                        Click="DeleteUser_Click"/>
+                
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+        
+        
+    </Grid>
+</Window>
