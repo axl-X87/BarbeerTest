@@ -57,5 +57,11 @@ namespace Barbeer
             
         }
 
+        private void AddRecBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RecordWindow rcrd = new RecordWindow();
+            rcrd.Show();
+            this.Hide();
+        }
     }
 }

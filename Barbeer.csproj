@@ -71,8 +71,12 @@
       <DependentUpon>AddNewBarberWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="BD\BarberStatus.cs" />
+    <Compile Include="BD\RecordViewClass.cs" />
     <Compile Include="ChangeBarberWindow.xaml.cs">
       <DependentUpon>ChangeBarberWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecordWindow.xaml.cs">
+      <DependentUpon>RecordWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewEmployeeWindow.xaml.cs">
       <DependentUpon>ViewEmployeeWindow.xaml</DependentUpon>
@@ -121,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RecordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ViewEmployeeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

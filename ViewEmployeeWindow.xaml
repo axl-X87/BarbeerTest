@@ -80,7 +80,17 @@
             </Grid>
         </Grid>
         <!--#endregion-->
-        
-        
+        <Button Grid.Column="1"
+                Grid.Row="1"
+                Style="{StaticResource ActionBtn}"
+                Height="50"
+                Width="150"
+                Content="Добавить запись"
+                Name="AddRecBtn"
+                Click="AddRecBtn_Click"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"/>
+
+
     </Grid>
 </Window>

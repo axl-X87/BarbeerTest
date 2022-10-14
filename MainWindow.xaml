@@ -67,7 +67,7 @@
                              VerticalAlignment="Center"
                              FontSize="36"
                              FontFamily="LucidaCosole"
-                             FontWeight="Bold"
+                             FontWeight="Bold" 
                              Name="EntryTbx"/>
                 </Grid>
                 <Grid Grid.Row="2">
