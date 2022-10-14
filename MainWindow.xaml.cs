@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,11 +58,11 @@ namespace Barbeer
             }
             else if (user == null)
             {
-                MessageBox.Show("Retry");
+                MessageBox.Show("Попробуй снова");
             }
             else
             {
-                MessageBox.Show("BAAD");
+                MessageBox.Show("Ошибка");
             }
         }
     }

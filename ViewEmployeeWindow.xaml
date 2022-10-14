@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Barbeer"
         mc:Ignorable="d"
         Title="ViewEmployeeWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
-    <Grid Background="black">
+    <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="10*" />
@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <!--#region Лист барберов -->
         <Grid Grid.Column="1">
-            <ListView Background="black"
+            <ListView Background="LightGray"
                       Name="EmployeeLV"
                       Foreground="White"
                       FontFamily="Lucida Console">

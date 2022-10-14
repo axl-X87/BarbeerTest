@@ -45,8 +45,8 @@ namespace Barbeer
             bbb.Post = PostTbx.Text.ToString();
             bbb.Information = InfoTbx.Text.ToString();
             bbb.Status = Convert.ToInt32(StatusTbx.Text);
-            Context.GetContext().Barber.Add(bbb);
-            Context.GetContext().SaveChanges();
+            ConBD.beerEN.Barber.Add(bbb);
+            ConBD.beerEN.SaveChanges();
         }
 
         private void AddBarberPhoto_Click(object sender, RoutedEventArgs e)

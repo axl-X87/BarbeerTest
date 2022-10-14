@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="BarberbeerModel1.Barber" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BarberbeerModel1.BlackList" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BarberbeerModel1.Client" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarberbeerModel1.LP" Width="1.5" PointX="2.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarberbeerModel1.LP" Width="1.5" PointX="2" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BarberbeerModel1.Record" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BarberbeerModel1.Service" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BarberbeerModel1.Status" Width="1.5" PointX="1.5" PointY="12" IsExpanded="true" />
